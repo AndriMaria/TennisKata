@@ -9,7 +9,7 @@ public class TennisKata
   public string GiveScore()
     {
         
-     return "";
+     return "Love-All";
 
     }
 
