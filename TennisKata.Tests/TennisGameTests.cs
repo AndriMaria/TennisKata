@@ -1,10 +1,17 @@
-﻿namespace TennisKata.Tests;
+﻿using Xunit;
 
-public class Tests
+namespace TennisKata.Tests;
+
+public class TennisTests
 {
     [Fact]
-    public void Test1()
+    public void BothZeroLoveAllResult()
     {
-
+      //arrange
+      var game = new TennisKata();
+      //act
+      var result = game.GiveScore();
+      //assert
+      Assert.Equal("Love-All", result);
     }
 }
