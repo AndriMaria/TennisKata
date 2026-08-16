@@ -1,6 +1,6 @@
 ﻿namespace TennisKata.Tests;
 
-public class 
+public class Tests
 {
     [Fact]
     public void Test1()
