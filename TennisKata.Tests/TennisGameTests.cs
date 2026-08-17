@@ -150,7 +150,7 @@ public class TennisTests
     //arrange
       var game = new TennisKata();
       //act
-      var result = game.GiveScore(3,5);
+      var result = game.GiveScore(0,4);
       //assert
       Assert.Equal("Win for player 2", result);
   }
@@ -160,7 +160,7 @@ public class TennisTests
     //arrange
       var game = new TennisKata();
       //act
-      var result = game.GiveScore(4,4);
+      var result = game.GiveScore(3,3);
       //assert
       Assert.Equal("deuce", result);
   }
@@ -183,6 +183,37 @@ public class TennisTests
       var result = game.GiveScore(5,6);
       //assert
       Assert.Equal("Advance for player 2", result);
+  }
+
+[Fact]
+public void AdvancePlayer1AtFourThreeResults()
+{
+    //arrange
+    var game = new TennisKata();
+    //act
+    var result = game.GiveScore(4,3);
+    //assert
+    Assert.Equal("Advance for player 1", result);
+}
+[Fact]
+public void Player1WinResults()
+  {
+    //arrange
+      var game = new TennisKata();
+      //acttest
+      var result = game.GiveScore(6,4);
+      //assert
+      Assert.Equal("Win for player 1", result);
+  }
+  [Fact]
+  public void Player2WinResults()
+  {
+    //arrange
+      var game = new TennisKata();
+      //act
+      var result = game.GiveScore(3,5);
+      //assert
+      Assert.Equal("Win for player 2", result);
   }
   
 }
