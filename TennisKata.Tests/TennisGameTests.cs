@@ -105,6 +105,26 @@ public class TennisTests
       Assert.Equal("Thirty-Fifteen", result);
   }
   [Fact]
+  public void FortyThirtyResults()
+  {
+     //arrange
+      var game = new TennisKata();
+      //acttest
+      var result = game.GiveScore(3,2);
+      //assert
+      Assert.Equal("Forty-Thirty", result);
+  }
+  [Fact]
+  public void ThirtyFortyResults()
+  {
+     //arrange
+      var game = new TennisKata();
+      //acttest
+      var result = game.GiveScore(2,3);
+      //assert
+      Assert.Equal("Thirty-Forty", result);
+  }
+  [Fact]
   public void ThirtyThirtyResults()
   {
     //arrange
@@ -114,5 +134,5 @@ public class TennisTests
       //assert
       Assert.Equal("Thirty-Thirty", result);
   }
-    
+  
 }
