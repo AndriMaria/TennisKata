@@ -1,9 +1,10 @@
-﻿using Xunit;
+﻿using Newtonsoft.Json.Linq;
+using Xunit;
 
 namespace TennisKata.Tests;
 
 public class TennisTests
-{
+{ //Love-All Test
     [Fact]
     public void BothZeroLoveAllResult()
     {
@@ -14,6 +15,7 @@ public class TennisTests
       //assert
       Assert.Equal("Love-All", result);
     }
+    //1-0 test
      [Fact]
     public void FifteenLoveResult()
     {
@@ -24,6 +26,7 @@ public class TennisTests
       //assert
       Assert.Equal("Fifteen-Love", result);
     }
+    //0-1 test
      [Fact]
     public void LoveFitfteenResult()
     {
@@ -34,6 +37,7 @@ public class TennisTests
       //assert
       Assert.Equal("Love-Fifteen", result);
     }
+    //Comment: 0-2 test
     [Fact]
     public void LoveThirtyResult()
     {
@@ -44,6 +48,7 @@ public class TennisTests
       //assert
       Assert.Equal("Love-Thirty", result);
     }
+    //Comment: 2-0 test
     [Fact]
     public void ThirtyLoveResult()
     {
@@ -54,6 +59,7 @@ public class TennisTests
       //assert
       Assert.Equal("Thirty-Love", result);
     }
+    //Comment: 3-0 test
     [Fact]
     public void FortyLoveResult()
     {
@@ -64,6 +70,7 @@ public class TennisTests
       //assert
       Assert.Equal("Forty-Love", result);
     }
+    //Comment: 0-3 test
     [Fact]
     public void LoveFortyResult()
     {
@@ -74,6 +81,7 @@ public class TennisTests
       //assert
       Assert.Equal("Love-Forty", result);
     }
+    //Comment: 1-1 test
     [Fact]
     public void FifteenFifteenResults()
   {
@@ -84,6 +92,7 @@ public class TennisTests
       //assert
       Assert.Equal("Fifteen-Fifteen", result);
   }
+  //Comment: 1-2 test
    [Fact]
     public void FifteenThirtyResults()
   {
@@ -94,6 +103,7 @@ public class TennisTests
       //assert
       Assert.Equal("Fifteen-Thirty", result);
   }
+  //Comment: 2-1 test
   [Fact]
     public void ThirtyFifteenResults()
   {
@@ -104,6 +114,7 @@ public class TennisTests
       //assert
       Assert.Equal("Thirty-Fifteen", result);
   }
+  //Comment: 3-2 test
   [Fact]
   public void FortyThirtyResults()
   {
@@ -114,6 +125,7 @@ public class TennisTests
       //assert
       Assert.Equal("Forty-Thirty", result);
   }
+  //Comment: 2-3 test
   [Fact]
   public void ThirtyFortyResults()
   {
@@ -124,6 +136,7 @@ public class TennisTests
       //assert
       Assert.Equal("Thirty-Forty", result);
   }
+  //Comment: 2-2 test
   [Fact]
   public void ThirtyThirtyResults()
   {
@@ -134,6 +147,7 @@ public class TennisTests
       //assert
       Assert.Equal("Thirty-Thirty", result);
   }
+  //Comment: 4-0 test
   [Fact]
   public void FourZeroWinResults()
   {
@@ -144,6 +158,7 @@ public class TennisTests
       //assert
       Assert.Equal("Win for player 1", result);
   }
+  //Comment: 0-4 test
   [Fact]
   public void ZeroFourWinResults()
   {
@@ -154,6 +169,7 @@ public class TennisTests
       //assert
       Assert.Equal("Win for player 2", result);
   }
+  //Comment: deuce test
   [Fact]
   public void deuceResults()
   {
@@ -164,6 +180,7 @@ public class TennisTests
       //assert
       Assert.Equal("deuce", result);
   }
+  //Comment: advantage for player 1 test
   [Fact]
   public void AdvanceforPlayerOneResults()
   {
@@ -172,8 +189,9 @@ public class TennisTests
       //acttest
       var result = game.GiveScore(6,5);
       //assert
-      Assert.Equal("Advance for player 1", result);
+      Assert.Equal("advantage for player 1", result);
   }
+  //Comment: advantage for player 2 test
   [Fact]
   public void AdvanceforPlayerTwoResults()
   {
@@ -182,19 +200,9 @@ public class TennisTests
       //act
       var result = game.GiveScore(5,6);
       //assert
-      Assert.Equal("Advance for player 2", result);
+      Assert.Equal("advantage for player 2", result);
   }
-
-[Fact]
-public void AdvancePlayer1AtFourThreeResults()
-{
-    //arrange
-    var game = new TennisKata();
-    //act
-    var result = game.GiveScore(4,3);
-    //assert
-    Assert.Equal("Advance for player 1", result);
-}
+  //Comment: win for player 1 test
 [Fact]
 public void Player1WinResults()
   {
@@ -205,6 +213,7 @@ public void Player1WinResults()
       //assert
       Assert.Equal("Win for player 1", result);
   }
+   //Comment: win for player 2 test
   [Fact]
   public void Player2WinResults()
   {

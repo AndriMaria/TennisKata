@@ -28,11 +28,11 @@ public class TennisKata
       }
       else if (player1points - player2points == 1)
       {
-        return "Advance for player 1";
+        return "advantage for player 1";
       }
       else if (player2points - player1points == 1)
       {
-        return "Advance for player 2";
+        return "advantage for player 2";
       }
       else if (player1points - player2points >= 2)
       {
@@ -53,7 +53,7 @@ public class TennisKata
 //case for 4-0,0-4,4-1 etc
      else if (player1points>=4 || player2points>= 4)
     { 
-      if(player1points <=2 )
+      if (player1points <=2 )
       return "Win for player 2";
       else 
       return "Win for player 1";
