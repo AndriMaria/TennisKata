@@ -34,5 +34,25 @@ public class TennisTests
       //assert
       Assert.Equal("Love-Fifteen", result);
     }
+    [Fact]
+    public void FifteenFifteenResults()
+  {
+    //arrange
+      var game = new TennisKata();
+      //acttest
+      var result = game.GiveScore(1,1);
+      //assert
+      Assert.Equal("Fifteen-Fifteen", result);
+  }
+  [Fact]
+  public void ThirtyThirtyResults()
+  {
+    //arrange
+      var game = new TennisKata();
+      //acttest
+      var result = game.GiveScore(1,1);
+      //assert
+      Assert.Equal("Thirty-Thirty", result);
+  }
     
 }
